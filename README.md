@@ -34,43 +34,43 @@ frontend stats
 listen api-server-6443 
   bind *:6443
   mode tcp
-#  server bootstrap bootstrap.ocpuat.finopaymentbank.in:6443 check inter 1s backup 
-  server master0 master1.ocpuat.finopaymentbank.in:6443 check inter 1s
-  server master1 master2.ocpuat.finopaymentbank.in:6443 check inter 1s
-  server master2 master3.ocpuat.finopaymentbank.in:6443 check inter 1s
+#  server bootstrap bootstrap.ocpuat.satya.in:6443 check inter 1s backup 
+  server master0 master1.ocpuat.satya.in:6443 check inter 1s
+  server master1 master2.ocpuat.satya.in:6443 check inter 1s
+  server master2 master3.ocpuat.satya.in:6443 check inter 1s
 listen machine-config-server-22623 
   bind *:22623
   mode tcp
-#  server bootstrap bootstrap.ocpuat.finopaymentbank.in:22623 check inter 1s backup 
-  server master0 master1.ocpuat.finopaymentbank.in:22623 check inter 1s
-  server master1 master2.ocpuat.finopaymentbank.in:22623 check inter 1s
-  server master2 master3.ocpuat.finopaymentbank.in:22623 check inter 1s
+#  server bootstrap bootstrap.ocpuat.satya.in:22623 check inter 1s backup 
+  server master0 master1.ocpuat.satya.in:22623 check inter 1s
+  server master1 master2.ocpuat.satya.in:22623 check inter 1s
+  server master2 master3.ocpuat.satya.in:22623 check inter 1s
 
 listen ingress-router-443 
   bind *:443
   mode tcp
   balance roundrobin
-  server worker1 worker1.ocpuat.finopaymentbank.in:443 check inter 1s
-  server worker2 worker2.ocpuat.finopaymentbank.in:443 check inter 1s
-  server worker3 worker3.ocpuat.finopaymentbank.in:443 check inter 1s
-  server worker4 worker4.ocpuat.finopaymentbank.in:443 check inter 1s
-  server worker5 worker5.ocpuat.finopaymentbank.in:443 check inter 1s
-  server worker6 worker6.ocpuat.finopaymentbank.in:443 check inter 1s
-  server worker7 worker7.ocpuat.finopaymentbank.in:443 check inter 1s
-  server worker8 worker8.ocpuat.finopaymentbank.in:443 check inter 1s
+  server worker1 worker1.ocpuat.satya.in:443 check inter 1s
+  server worker2 worker2.ocpuat.satya.in:443 check inter 1s
+  server worker3 worker3.ocpuat.satya.in:443 check inter 1s
+  server worker4 worker4.ocpuat.satya.in:443 check inter 1s
+  server worker5 worker5.ocpuat.satya.in:443 check inter 1s
+  server worker6 worker6.ocpuat.satya.in:443 check inter 1s
+  server worker7 worker7.ocpuat.satya.in:443 check inter 1s
+  server worker8 worker8.ocpuat.satya.in:443 check inter 1s
 
 listen ingress-router-80
   bind *:80
   mode http
   balance roundrobin
-  server worker1 worker1.ocpuat.finopaymentbank.in:80 check inter 1s
-  server worker2 worker2.ocpuat.finopaymentbank.in:80 check inter 1s
-  server worker3 worker3.ocpuat.finopaymentbank.in:80 check inter 1s
-  server worker4 worker4.ocpuat.finopaymentbank.in:80 check inter 1s
-  server worker5 worker5.ocpuat.finopaymentbank.in:80 check inter 1s
-  server worker6 worker6.ocpuat.finopaymentbank.in:80 check inter 1s
-  server worker7 worker7.ocpuat.finopaymentbank.in:80 check inter 1s
-  server worker8 worker8.ocpuat.finopaymentbank.in:80 check inter 1s
+  server worker1 worker1.ocpuat.satya.in:80 check inter 1s
+  server worker2 worker2.ocpuat.satya.in:80 check inter 1s
+  server worker3 worker3.ocpuat.satya.in:80 check inter 1s
+  server worker4 worker4.ocpuat.satya.in:80 check inter 1s
+  server worker5 worker5.ocpuat.satya.in:80 check inter 1s
+  server worker6 worker6.ocpuat.satya.in:80 check inter 1s
+  server worker7 worker7.ocpuat.satya.in:80 check inter 1s
+  server worker8 worker8.ocpuat.satya.in:80 check inter 1s
 
 
 
@@ -79,13 +79,13 @@ listen ingress-router-9002
   balance roundrobin
   mode http
   option forwardfor
-  ##http-request set-header Host bll-apigateway.apps.ocpuat.finopaymentbank.in
-  #reqirep ^Host: Host:\ bll-apigateway.apps.ocpuat.finopaymentbank.in
-  server worker1 worker1.ocpuat.finopaymentbank.in:80 check inter 1s
-  server worker2 worker2.ocpuat.finopaymentbank.in:80 check inter 1s
-  server worker3 worker3.ocpuat.finopaymentbank.in:80 check inter 1s
-  server worker4 worker4.ocpuat.finopaymentbank.in:80 check inter 1s
-  server worker5 worker5.ocpuat.finopaymentbank.in:80 check inter 1s
-  server worker6 worker6.ocpuat.finopaymentbank.in:80 check inter 1s
-  server worker7 worker7.ocpuat.finopaymentbank.in:80 check inter 1s
-  server worker8 worker8.ocpuat.finopaymentbank.in:80 check inter 1s
+  ##http-request set-header Host bll-apigateway.apps.ocpuat.satya.in
+  #reqirep ^Host: Host:\ bll-apigateway.apps.ocpuat.satya.in
+  server worker1 worker1.ocpuat.satya.in:80 check inter 1s
+  server worker2 worker2.ocpuat.satya.in:80 check inter 1s
+  server worker3 worker3.ocpuat.satya.in:80 check inter 1s
+  server worker4 worker4.ocpuat.satya.in:80 check inter 1s
+  server worker5 worker5.ocpuat.satya.in:80 check inter 1s
+  server worker6 worker6.ocpuat.satya.in:80 check inter 1s
+  server worker7 worker7.ocpuat.satya.in:80 check inter 1s
+  server worker8 worker8.ocpuat.satya.in:80 check inter 1s
